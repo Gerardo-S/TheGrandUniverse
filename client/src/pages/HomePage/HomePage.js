@@ -68,7 +68,7 @@ return (
                 </div>
             </div>
         </section>
-        <section className="imgContainer">
+        <section className="imgContainerGalaxySky">
             <img id="GalaxySky"
                 src={Sky}
                 alt="GalaxySky"

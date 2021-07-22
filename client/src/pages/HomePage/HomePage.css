@@ -48,7 +48,12 @@ position:relative;
 }
 
 
+.imgContainerGalaxySky{
+    width: 100%;
+    height:1150px;
+    position:relative;
 
+}
 .blurredBackGround{
     position: absolute;
     padding: 0;
@@ -91,7 +96,8 @@ position:relative;
 }
 #GalaxySky{
    object-fit: cover;
-   width:100%
+   width:100%;
+   height:100%
    
 }
 
