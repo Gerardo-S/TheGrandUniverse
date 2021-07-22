@@ -4,10 +4,12 @@ import Flower from "../../../util/images/Flower.png"
 
 
 
-function Nav() {
+function Nav(props) {
+
+    const {navText, alignText}= props;
     return (
         <nav className="navbar navbar-dark bg-dark d-flex ">
-            <div className="container-fluid navItems justify-content-center">
+            <div className={`container-fluid navItems ${alignText}`}>
                 <span className="navbar-brand d-flex">
                     <img
                         src={Flower}
@@ -16,7 +18,7 @@ function Nav() {
                         height="50"
                         className="d-inline-block " />
                     <h2 className="universeText">
-                        TheGrandUniverse
+                        {navText}
                     </h2>
 
                 </span>

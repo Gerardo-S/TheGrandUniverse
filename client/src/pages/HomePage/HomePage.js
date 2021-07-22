@@ -4,7 +4,8 @@ import "../HomePage/HomePage.css"
 import Card from "../Components/Card/Card"
 import ForestWindow from "../../util/images/ForestWindow.jpg"
 import Sky from "../../util/images/Sky.jpg"
-function HomePage() {
+import Nav from "../Components/Nav/Nav"
+function HomePage(props) {
 
     const [apodImages, setApodImagess] = useState([]);
     useEffect(() => {
@@ -14,57 +15,61 @@ function HomePage() {
     }, []);
 
 
-return (
-    <div className="wrapper">
+    return (
 
-        <section className="imgContainer">
-            
-            <img
-                className="imgTreeBackGround img-fluid"
-                src={ForestWindow}
-                alt="Forest-Sky"
+        <div className="wrapper">
+            <Nav
+                navText={"TheGrandUniverse"}
+                alignText={"justify-content-center"}
             />
-            <main className="titleHeaderAPOD container text-wrap text-break">
-                <h1 >
-                    APOD
-                </h1>
-                <p className="lead">
-                    Select an Image Below for More
-                </p>
-            </main>
+            <section className="imgContainer">
 
-        </section>
-        <section className="imgContainerApi" style={{ zIndex: "2" }}>
-            <div className="blurredBackGround"></div>
-            <div className="imgCards">
-                <div className="row row-cols-1 row-cols-lg-4 row-cols-md-2 g-4 ">
-                    {apodImages.map((images) => (
-        
-                        <Card
-                            src={images.urlImage}
-                            thumbnail={images.thumbnail}
-                            mediaType={images.media_type}
-                            date = {images.date}
-                            alt={images.title}
-                            key={images.title}
-                        />
-                        
+                <img
+                    className="imgTreeBackGround img-fluid"
+                    src={ForestWindow}
+                    alt="Forest-Sky"
+                />
+                <main className="titleHeaderAPOD container text-wrap text-break">
+                    <h1 >
+                        APOD
+                    </h1>
+                    <p className="lead">
+                        Select an Image Below for More
+                    </p>
+                </main>
 
-                    ))}
+            </section>
+            <section className="imgContainerApi" style={{ zIndex: "2" }}>
+                <div className="blurredBackGround"></div>
+                <div className="imgCards">
+                    <div className="row row-cols-1 row-cols-lg-4 row-cols-md-2 g-4 ">
+                        {apodImages.map((images) => (
+
+                            <Card
+                                src={images.urlImage}
+                                thumbnail={images.thumbnail}
+                                mediaType={images.media_type}
+                                date={images.date}
+                                alt={images.title}
+                                key={images.title}
+                            />
+
+
+                        ))}
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section className="imgContainerGalaxySky">
-            <img id="GalaxySky"
-                src={Sky}
-                alt="GalaxySky"
-                className="d-inline-block" />
+            </section>
+            <section className="imgContainerGalaxySky">
+                <img id="GalaxySky"
+                    src={Sky}
+                    alt="GalaxySky"
+                    className="d-inline-block" />
 
-        </section>
+            </section>
 
-    </div>
+        </div>
 
-);
+    );
 }
 
 export default HomePage;

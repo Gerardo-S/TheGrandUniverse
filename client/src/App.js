@@ -2,11 +2,10 @@ import React from 'react';
 import HomePage from './pages/HomePage/HomePage';
 import ImageDetails from './pages/ImageDetails/ImageDetails';
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom"
-import Nav from "./pages/Components/Nav/Nav"
+
 function App() {
   return (
     <div >
-      <Nav/>
       <Router>
         <Switch>
           <Route exact path="/">
