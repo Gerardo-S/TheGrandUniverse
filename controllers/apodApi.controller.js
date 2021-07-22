@@ -10,7 +10,7 @@ function getApodImages(req, res) {
     const today = year + '-' + month + '-' + day;
 
     const currentDateToCalcPast = new Date();
-    const sixteenDaysAgo = currentDateToCalcPast.getDate() - 16;
+    const sixteenDaysAgo = currentDateToCalcPast.getDate() - 15;
 
     currentDateToCalcPast.setDate(sixteenDaysAgo);
     const pastSixteenDays = currentDateToCalcPast.toJSON().slice(0, 10);

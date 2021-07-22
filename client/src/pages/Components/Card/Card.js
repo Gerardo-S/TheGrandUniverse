@@ -4,7 +4,7 @@ import "../Card/Card.css"
 
 
 function Card(props) {
-    const { src, thumbnail, mediaType, alt } = props;
+    const { src, thumbnail, mediaType, date, alt } = props;
 
     const imageSrc =
 
@@ -12,12 +12,18 @@ function Card(props) {
 
             {mediaType === "image" ?
 
-                <img src={src} className="card-img-top" alt={alt} />
+                <img src={src} className="card-img" alt={alt} />
+
                 :
 
-                <img src={thumbnail} className="card-img-top" alt={alt} />
+                <img src={thumbnail} className="card-img" alt={alt} />
 
             }
+
+            <div className="card-img-overlay">
+                <p className=" card-img-overlay card-text ">{date}</p>
+            </div>
+
 
             {/* having trouble with https://solarsystem.nasa.gov/gltf_embed/2381/ */}
 
@@ -27,8 +33,8 @@ function Card(props) {
         <div className="col" >
             <Link to="/imageDetails">
                 {imageSrc}
-
             </Link>
+
         </div>
 
     );

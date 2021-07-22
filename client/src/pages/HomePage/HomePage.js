@@ -3,7 +3,6 @@ import { fetchApodImages } from "../../util/API/API";
 import "../HomePage/HomePage.css"
 import Card from "../Components/Card/Card"
 import ForestWindow from "../../util/images/ForestWindow.jpg"
-import Flower from "../../util/images/Flower.png"
 import Sky from "../../util/images/Sky.jpg"
 function HomePage() {
 
@@ -19,22 +18,7 @@ return (
     <div className="wrapper">
 
         <section className="imgContainer">
-            <nav className="navbar navbar-dark bg-dark d-flex ">
-                <div className="container-fluid navItems justify-content-center">
-                    <span className="navbar-brand d-flex">
-                        <img
-                            src={Flower}
-                            alt="Flower"
-                            width="53"
-                            height="50"
-                            className="d-inline-block " />
-                        <h2 className="universeText">
-                            TheGrandUniverse
-                        </h2>
-
-                    </span>
-                </div>
-            </nav>
+            
             <img
                 className="imgTreeBackGround img-fluid"
                 src={ForestWindow}
@@ -60,9 +44,11 @@ return (
                             src={images.urlImage}
                             thumbnail={images.thumbnail}
                             mediaType={images.media_type}
+                            date = {images.date}
                             alt={images.title}
                             key={images.title}
                         />
+                        
 
                     ))}
                 </div>
