@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 import Flower from "../../../util/images/Flower.png"
-import "../Nav/Nav.css"
+
 
 
 function Nav() {
