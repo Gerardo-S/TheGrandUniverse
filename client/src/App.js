@@ -4,6 +4,10 @@ import ImageDetails from './pages/ImageDetails/ImageDetails';
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom"
 
 function App() {
+
+  
+
+
   return (
     <div >
       <Router>
@@ -22,6 +26,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
+  
     </div>
   );
 }

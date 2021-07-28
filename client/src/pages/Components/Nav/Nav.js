@@ -1,14 +1,14 @@
 import React from 'react'
-import { Link } from "react-router-dom"
 import Flower from "../../../util/images/Flower.png"
-
-
+import { Link } from "react-router-dom"
 
 function Nav(props) {
 
-    const {navText, alignText}= props;
-    return (
-        <nav className="navbar navbar-dark bg-dark d-flex ">
+    const { navText, alignText, imageDetailsPageCondition } = props;
+
+    function NavHeader() {
+        return (
+
             <div className={`container-fluid navItems ${alignText}`}>
                 <span className="navbar-brand d-flex">
                     <img
@@ -23,6 +23,20 @@ function Nav(props) {
 
                 </span>
             </div>
+        )
+    };
+
+    return (
+
+        <nav className="navbar navbar-dark bg-dark d-flex ">
+            {imageDetailsPageCondition ? <NavHeader /> :
+
+                <Link to="/apodImages">
+                    <NavHeader />
+                </Link>
+
+            }
+
         </nav>
 
     );

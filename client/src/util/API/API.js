@@ -2,7 +2,14 @@ import axios from "axios";
 
 
 function fetchApodImages(){
-    return axios.get("/api/getApodImages")
+    return axios.get("/api/apodImages")
 };
 
-export {fetchApodImages};
+function saveApod (apod) {
+    return axios.post("/api/apodImages", apod)
+}
+
+function fetchSavedApod () {
+    return axios.get("/api/SavedapodImages")
+}
+export {fetchApodImages, saveApod, fetchSavedApod};

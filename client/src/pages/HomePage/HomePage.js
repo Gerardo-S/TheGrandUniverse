@@ -1,19 +1,34 @@
-import React, { useEffect, useState } from 'react'
-import { fetchApodImages } from "../../util/API/API";
+import React, {  useEffect, useState } from 'react'
+import { fetchApodImages, saveApod } from "../../util/API/API";
 import "../HomePage/HomePage.css"
 import Card from "../Components/Card/Card"
 import ForestWindow from "../../util/images/ForestWindow.jpg"
 import Sky from "../../util/images/Sky.jpg"
 import Nav from "../Components/Nav/Nav"
-function HomePage(props) {
-
+function HomePage() {
+    
     const [apodImages, setApodImagess] = useState([]);
+
+    const  handleApodSave= async (apod) => {
+      
+        try{
+            const result = await saveApod(apod)
+            
+
+        }
+        catch (error) {
+            console.log(error)
+
+        }
+        
+    };
+
     useEffect(() => {
         fetchApodImages().then(({ data }) => {
             setApodImagess(data)
+
         });
     }, []);
-
 
     return (
 
@@ -21,6 +36,7 @@ function HomePage(props) {
             <Nav
                 navText={"TheGrandUniverse"}
                 alignText={"justify-content-center"}
+                imageDetailsPageCondition={true}
             />
             <section className="imgContainer">
 
@@ -46,17 +62,21 @@ function HomePage(props) {
                         {apodImages.map((images) => (
 
                             <Card
-                                src={images.urlImage}
-                                thumbnail={images.thumbnail}
-                                mediaType={images.media_type}
-                                date={images.date}
-                                alt={images.title}
-                                key={images.title}
+                            id={images.title}
+                            src={images.urlImage}
+                            thumbnail={images.thumbnail_url}
+                            mediaType={images.media_type}
+                            date={images.date}
+                            alt={images.title}
+                            key={images.title}
+                            copyright={images.copyright}
+                            details={images.explanation}
+                            onClick={()=> handleApodSave(images)}
                             />
 
 
                         ))}
-                    </div>
+                    </div>s
                 </div>
             </section>
             <section className="imgContainerGalaxySky">
