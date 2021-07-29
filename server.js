@@ -20,7 +20,7 @@ if (process.env.NODE_ENV === "production") {
 app.get("/api/apodImages", apodApiController.getApodImages);
 app.get("/api/SavedapodImages", apodController.selectedApod);
 app.post("/api/apodImages", apodController.createApod);
-app.delete("/api/apodImages", apodController.deleteApod)
+app.delete("/api/SavedapodImages", apodController.deleteApod)
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));

@@ -22,7 +22,8 @@ function createApod(req, res){
 }
 
 function deleteApod (req,res){
-    db.Apod.delete(apod).then((apod) => res.json({apod}))
+   
+    db.Apod.deleteMany({})
     .catch(error =>{
         console.log(error)
         res.status(400).send("Unable to delete apod")

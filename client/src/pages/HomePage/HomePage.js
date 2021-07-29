@@ -1,4 +1,4 @@
-import React, {  useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { fetchApodImages, saveApod } from "../../util/API/API";
 import "../HomePage/HomePage.css"
 import Card from "../Components/Card/Card"
@@ -6,21 +6,21 @@ import ForestWindow from "../../util/images/ForestWindow.jpg"
 import Sky from "../../util/images/Sky.jpg"
 import Nav from "../Components/Nav/Nav"
 function HomePage() {
-    
+
     const [apodImages, setApodImagess] = useState([]);
 
-    const  handleApodSave= async (apod) => {
-      
-        try{
-            const result = await saveApod(apod)
-            
+    const handleApodSave = async (apod) => {
+
+        try {
+             await saveApod(apod)
+
 
         }
         catch (error) {
             console.log(error)
 
         }
-        
+
     };
 
     useEffect(() => {
@@ -62,16 +62,16 @@ function HomePage() {
                         {apodImages.map((images) => (
 
                             <Card
-                            id={images.title}
-                            src={images.urlImage}
-                            thumbnail={images.thumbnail_url}
-                            mediaType={images.media_type}
-                            date={images.date}
-                            alt={images.title}
-                            key={images.title}
-                            copyright={images.copyright}
-                            details={images.explanation}
-                            onClick={()=> handleApodSave(images)}
+                                id={images.title}
+                                src={images.urlImage}
+                                thumbnail={images.thumbnail_url}
+                                mediaType={images.media_type}
+                                date={images.date}
+                                alt={images.title}
+                                key={images.title}
+                                copyright={images.copyright}
+                                details={images.explanation}
+                                onClick={() => handleApodSave(images)}
                             />
 
 

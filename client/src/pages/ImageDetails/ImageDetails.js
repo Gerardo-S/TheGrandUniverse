@@ -19,6 +19,9 @@ function ImageDetails() {
         fetchSavedApod().then(({ data }) => {
             setSaveApod(data.apod);
             setIsLoading(false)
+        }).catch(error => {
+            console.log(error);
+            setIsLoading(false);
         });
 
     }, []);

@@ -12,4 +12,8 @@ function saveApod (apod) {
 function fetchSavedApod () {
     return axios.get("/api/SavedapodImages")
 }
-export {fetchApodImages, saveApod, fetchSavedApod};
+
+function deleteSavedApod () {
+    return axios.delete("/api/SavedapodImages")
+}
+export {fetchApodImages, saveApod, fetchSavedApod,deleteSavedApod};
