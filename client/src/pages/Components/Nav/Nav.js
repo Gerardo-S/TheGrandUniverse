@@ -1,6 +1,5 @@
 import React from "react";
 import Flower from "../../../util/images/Flower.png";
-// import { deleteSavedApod } from '../../../util/API/API';
 import { Link } from "react-router-dom";
 
 function Nav(props) {

@@ -29,78 +29,20 @@ function HomePage() {
         imageDetailsPageCondition={true}
       />
       <section className="imgContainer">
-        {/* <img
-          className="imgTreeBackGround img-fluid"
-          src={ForestWindow}
-          alt="Forest-Sky"
-        /> */}
         <main className="titleHeaderAPOD container text-wrap text-break">
           <h1>A.P.O.D.</h1>
           <h2>Astronomy Picture Of The Day</h2>
           <p className="lead">Select an Image Below for More</p>
         </main>
       </section>
-      {/* <section className="imgContainerApi" style={{ zIndex: "2" }}>
-        <div className="blurredBackGround"></div>
-        {error && <p>{error}</p>}
-        {!data && <p> Loading...</p>}
-        {data && (
-          <div className="imgCards">
-            <div className="row row-cols-1 row-cols-lg-4 row-cols-md-2 g-4 ">
-              <Card
-                id={data[0].title}
-                src={data[0].hdurl}
-                thumbnail={data[0].thumbnail_url}
-                mediaType={data[0].media_type}
-                date={data[0].date}
-                alt={data[0].title}
-                key={data[0].title}
-                copyright={data[0].copyright}
-                details={data[0].explanation}
-              />
 
-              {data.map((images) => (
-                <Card
-                  id={images.title}
-                  src={images.hdurl}
-                  thumbnail={images.thumbnail_url}
-                  mediaType={images.media_type}
-                  date={images.date}
-                  alt={images.title}
-                  key={images.title}
-                  copyright={images.copyright}
-                  details={images.explanation}
-                />
-              ))}
-            </div>
-          </div>
-        )}
-      </section> */}
       <section className="imgContainerGalaxySky">
-        {/* <img
-          id="GalaxySky"
-          src={Sky}
-          alt="GalaxySky"
-          className="d-inline-block"
-        /> */}
         <div className="container cardContainer pb-5 pt-5">
           {error && <p>{error}</p>}
           {!data && <p> Loading...</p>}
           {data && (
             <div className="imgCards ">
               <div className="row row-cols-1 row-cols-xl-4 row-cols-md-2  g-4 ">
-                {/* <Card
-                id={data[0].title}
-                src={data[0].hdurl}
-                thumbnail={data[0].thumbnail_url}
-                mediaType={data[0].media_type}
-                date={data[0].date}
-                alt={data[0].title}
-                key={data[0].title}
-                copyright={data[0].copyright}
-                details={data[0].explanation}
-              /> */}
-
                 {data.map((images) => (
                   <Card
                     id={images.title}
