@@ -10,7 +10,7 @@ function ImageDetails() {
   const { data, error } = useSWR(makeAPODUrl({ date }));
 
   return (
-    <div>
+    <div className="bg-dark imageDetailsBackground ">
       <Nav
         navText={"Return to APOD"}
         alignText={"justify-content-center"}
@@ -18,7 +18,7 @@ function ImageDetails() {
       />
 
       <div
-        className="container imageDetailsContainer bg-dark text-white text-center pt-5 vh-100
+        className="container  navBoarderColor text-white text-center pt-5  
                 mw-100"
       >
         {error && <p>Error:{error}</p>}

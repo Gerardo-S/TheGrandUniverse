@@ -7,7 +7,7 @@ function Card(props) {
     props;
 
   const imageSrc = (
-    <div className="card h-100">
+    <div className="card h-100 ">
       <img
         id={id}
         src={mediaType === "image" ? src : thumbnail}

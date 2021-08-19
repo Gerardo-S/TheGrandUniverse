@@ -25,7 +25,7 @@ function Nav(props) {
 
   function DeleteApodHeader() {
     return (
-      <div className={`container-fluid navItems ${alignText}`}>
+      <div className={`container-fluid navItems ${alignText} `}>
         <span className="navbar-brand d-flex">
           <img
             src={Flower}
@@ -41,7 +41,7 @@ function Nav(props) {
   }
 
   return (
-    <nav className="navbar navbar-dark bg-dark d-flex ">
+    <nav className="navbar  bg-dark d-flex mb-1">
       {imageDetailsPageCondition ? (
         <NavHeader />
       ) : (
