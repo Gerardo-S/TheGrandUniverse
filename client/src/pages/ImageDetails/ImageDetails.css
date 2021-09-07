@@ -35,6 +35,9 @@
   overflow: auto;
 }
 
+.explanationSection p::-webkit-scrollbar {
+  display: none;
+}
 .navBoarderColor {
   border-top: solid 3px white;
 }
