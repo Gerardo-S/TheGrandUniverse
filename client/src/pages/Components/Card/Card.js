@@ -13,9 +13,6 @@ function Card(props) {
         src={mediaType === "image" ? src : thumbnail}
         className="card-img"
         alt={alt}
-        data-image-copyright={copyright}
-        data-image-details={details}
-        data-image-date={date}
       />
 
       <div className="card-img-overlay">
