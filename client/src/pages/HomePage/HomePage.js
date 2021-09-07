@@ -30,6 +30,9 @@ function HomePage() {
         imageDetailsPageCondition={true}
       />
       <section className="imgContainer">
+        <p className="text-white-50">
+          Image Copyright(ForestSky): Will GodWard
+        </p>
         <main className="titleHeaderAPOD container text-wrap text-break">
           <h1>A.P.O.D.</h1>
           <h2>Astronomy Picture Of The Day</h2>
