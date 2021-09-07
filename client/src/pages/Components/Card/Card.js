@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import "../Card/Card.css";
 
 function Card(props) {
-  const { id, src, thumbnail, mediaType, date, alt, copyright, details } =
-    props;
+  const { id, src, thumbnail, mediaType, date, alt } = props;
 
   const imageSrc = (
     <div className="card h-100 ">
