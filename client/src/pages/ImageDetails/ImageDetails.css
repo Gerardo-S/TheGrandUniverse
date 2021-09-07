@@ -24,14 +24,23 @@
 }
 
 .explanationSection {
-  max-width: 50%;
   margin: auto;
+  padding: 5px;
+  max-width: 1200px;
 }
 
 .explanationSection p {
   font-size: x-large;
+  max-height: 300px;
+  overflow: auto;
 }
 
 .navBoarderColor {
   border-top: solid 3px white;
+}
+
+@media (max-width: 420px) {
+  .explanationSection p {
+    font-size: large;
+  }
 }

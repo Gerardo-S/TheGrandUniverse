@@ -18,21 +18,21 @@ function ImageDetails() {
       />
 
       <div
-        className="container  navBoarderColor text-white text-center pt-5  
+        className="container navBoarderColor text-white  pt-5  pr-2 pl-2
                 mw-100"
       >
         {error && <p>Error:{error}</p>}
         {!data && <p>Loading...</p>}
         {data && (
           <>
-            <h1>{data.title}</h1>
-            <h5 className="mt-3 mb-2lead">{data.date}</h5>
+            <h1 className="text-center">{data.title}</h1>
+            <h5 className="mt-3 mb-2lead text-center">{data.date}</h5>
             <main className="imgContainerDetailsPage  mx-auto  m-3">
               <img src={data.hdurl} alt={data.alt} />
             </main>
-            <p>copyright: {data.copyright}</p>
+            <p className="text-center">copyright: {data.copyright}</p>
             <section className="explanationSection">
-              <p className="lead">{data.explanation}</p>
+              <p className="lead text-wrap">{data.explanation}</p>
             </section>
           </>
         )}

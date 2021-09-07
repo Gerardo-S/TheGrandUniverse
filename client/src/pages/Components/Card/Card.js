@@ -25,7 +25,7 @@ function Card(props) {
   );
 
   return (
-    <div className="col ">
+    <div className="col d-flex justify-content-center">
       <Link to={`/apod/${date}`}>{imageSrc}</Link>
     </div>
   );
