@@ -3,6 +3,7 @@ import axios from "axios";
 import { makeAPODUrl } from "../../util/API/API";
 import "../HomePage/HomePage.css";
 import Card from "../Components/Card/Card";
+import Spinner from "../Components/Spinner/Spinner";
 import Nav from "../Components/Nav/Nav";
 import useSWR from "swr";
 import { format, subDays } from "date-fns";
@@ -39,7 +40,8 @@ function HomePage() {
       <section className="imgContainerGalaxySky">
         <div className="container cardContainer pb-5 pt-5">
           {error && <p>{error}</p>}
-          {!data && <p> Loading...</p>}
+          {!data && <Spinner />}
+          {/* {!data && <p> Loading...</p>} */}
           {data && (
             <div className="imgCards ">
               <div className="row row-cols-1 row-cols-xl-4 row-cols-md-2  g-4 ">
