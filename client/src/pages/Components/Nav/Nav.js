@@ -22,7 +22,7 @@ function Nav(props) {
     );
   }
 
-  function DeleteApodHeader() {
+  function DetailsApodHeader() {
     return (
       <div className={`container-fluid navItems ${alignText} `}>
         <span className="navbar-brand d-flex">
@@ -45,7 +45,7 @@ function Nav(props) {
         <NavHeader />
       ) : (
         <Link to="/">
-          <DeleteApodHeader />
+          <DetailsApodHeader />
         </Link>
       )}
     </nav>

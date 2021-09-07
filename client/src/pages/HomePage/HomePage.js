@@ -39,12 +39,10 @@ function HomePage() {
           <p className="lead">Select an Image Below for More</p>
         </main>
       </section>
-
       <section className="imgContainerGalaxySky">
         <div className="container cardContainer pb-5 pt-5">
           {error && <p>{error}</p>}
           {!data && <Spinner />}
-          {/* {!data && <p> Loading...</p>} */}
           {data && (
             <div className="imgCards ">
               <div className="row row-cols-1 row-cols-xl-4 row-cols-md-2  g-4 ">
