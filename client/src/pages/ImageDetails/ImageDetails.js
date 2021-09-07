@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import useSWR from "swr";
 import "../../pages/ImageDetails/ImageDetails.css";
 import { makeAPODUrl } from "../../util/API/API";
+import Spinner from "../Components/Spinner/Spinner";
 import Nav from "../Components/Nav/Nav";
 function ImageDetails() {
   const params = useParams();
@@ -22,7 +23,11 @@ function ImageDetails() {
                 mw-100"
       >
         {error && <p>Error:{error}</p>}
-        {!data && <p>Loading...</p>}
+        {!data && (
+          <main className="imgContainerDetailsPage  mx-auto  m-3">
+            <Spinner />
+          </main>
+        )}
         {data && (
           <>
             <h1 className="text-center">{data.title}</h1>
